@@ -206,7 +206,7 @@ Partial Class Form6
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(50, 26)
         Me.Button6.TabIndex = 87
-        Me.Button6.Text = "DATE"
+        Me.Button6.Text = "MON"
         Me.ToolTip1.SetToolTip(Me.Button6, "序号和日期命名")
         Me.Button6.UseVisualStyleBackColor = False
         '
@@ -269,7 +269,7 @@ Partial Class Form6
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.ComboBox1.Font = New System.Drawing.Font("方正黑体_GBK", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"(无)", "{index}_{date}", "{0index}_{0date}", "{index}_{date}_{name}", "{0index}_{0date}_{name}", "{date}_{index}", "{0date}_{0index}", "{date}_{index}_{name}", "{0date}_{0index}_{name}"})
+        Me.ComboBox1.Items.AddRange(New Object() {"(无)", "{0index}_{0month}", "{0index}_{0date}", "{0index}_{0date}_{name}"})
         Me.ComboBox1.Location = New System.Drawing.Point(5, 415)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(207, 24)

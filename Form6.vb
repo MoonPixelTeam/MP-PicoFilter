@@ -57,13 +57,14 @@ Public Class Form6
         Dim toolTip As New ToolTip()
         toolTip.ToolTipIcon = ToolTipIcon.Info
         toolTip.ToolTipTitle = "可用格式"
-        toolTip.SetToolTip(ComboBox1, "{name} - 原始文件名" & vbCrLf & "{index} - 序号" & vbCrLf & "{0index} - 补齐0的序号" & vbCrLf & "{date} - 日期(yyyyMMdd)" & vbCrLf & "{0date} - 补齐0的日期(yyyyMMdd)")
+        toolTip.SetToolTip(ComboBox1, "{name} - 原始文件名" & vbCrLf & "{index} - 序号(!)" & vbCrLf & "{0index} - 补齐0的序号(0!)" & vbCrLf & "{month} - 月(M月)" & vbCrLf & "{0month} - 补齐0的月(0M月)" & vbCrLf & "{date} - 日期(yyyyMMdd)" & vbCrLf & "{0date} - 补齐0的日期(yyyy0M0d)")
     End Sub
 
     Private Sub ApplyButton_Click(sender As Object, e As EventArgs) Handles ApplyButton.Click
         Dim formatString As String = ComboBox1.Text
         If String.IsNullOrWhiteSpace(formatString) Then Return
-
+        Dim currentMonth As String = DateTime.Now.Month.ToString & "月"
+        Dim paddedMonth As String = DateTime.Now.Month.ToString.PadLeft(2, "0"c) & "月"
         Dim currentDate As String = DateTime.Now.ToString("yyyyMMdd")
         Dim paddedDate As String = DateTime.Now.ToString("yyyyMMdd").PadLeft(8, "0"c) ' 自动补齐0位
         Dim maxIndexLength As Integer = ListViewPre.Items.Count.ToString().Length ' 计算最大序号长度
@@ -87,7 +88,10 @@ Public Class Form6
                                             .Replace("{index}", indexStr) _
                                             .Replace("{0index}", paddedIndex) _
                                             .Replace("{date}", currentDate) _
-                                            .Replace("{0date}", paddedDate) ' 添加自动补齐0的日期
+                                            .Replace("{0date}", paddedDate) _ ' 添加自动补齐0的日期
+                                            .Replace("{month}", currentMonth) _
+                                            .Replace("{0month}", paddedMonth) ' 添加自动补齐0的日期
+
 
             newName &= fileExtension ' 保留原始文件扩展名
             ListViewPre.Items(i).SubItems(2).Text = newName
@@ -108,7 +112,7 @@ Public Class Form6
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        ComboBox1.Text = "{0index}_{0date}"
+        ComboBox1.Text = "{0index}_{0month}"
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -117,6 +121,8 @@ Public Class Form6
             If result = DialogResult.Yes Then
                 Me.Close()
             End If
+        Else
+            Me.Close()
         End If
     End Sub
 

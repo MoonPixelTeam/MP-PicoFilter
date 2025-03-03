@@ -43,6 +43,7 @@ Partial Class Form2
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -77,11 +78,11 @@ Partial Class Form2
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.DimGray
-        Me.Label3.Location = New System.Drawing.Point(14, 75)
+        Me.Label3.Location = New System.Drawing.Point(16, 99)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(189, 40)
+        Me.Label3.Size = New System.Drawing.Size(131, 20)
         Me.Label3.TabIndex = 3
-        Me.Label3.Text = "© 2025 ReGoMark" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "版权所有，保留所有权利。"
+        Me.Label3.Text = "© 2025 ReGoMark"
         '
         'Label7
         '
@@ -136,9 +137,9 @@ Partial Class Form2
         Me.Label9.ForeColor = System.Drawing.Color.DarkSlateBlue
         Me.Label9.Location = New System.Drawing.Point(308, 118)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(401, 20)
+        Me.Label9.Size = New System.Drawing.Size(395, 20)
         Me.Label9.TabIndex = 17
-        Me.Label9.Text = "支持：https://github.com/ReGoMark/PicoFilter"
+        Me.Label9.Text = "支持：https://github.com/MoonPixelTeam/MP-PicoFilter"
         '
         'Label5
         '
@@ -150,7 +151,7 @@ Partial Class Form2
         Me.Label5.Size = New System.Drawing.Size(397, 127)
         Me.Label5.TabIndex = 48
         Me.Label5.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "声明:  本软件受 MIT 许可协议的的保护。此外软件本身包含的字体或其他相关资源，版权归各自公司所有，受相应的许可协议及著作权法保护。用户需遵守相应字体供应" &
-    "商的使用许可。涉及该资源的侵权行为由使用者承担一切责任。"
+    "商的使用许可。"
         '
         'Label11
         '
@@ -218,11 +219,11 @@ Partial Class Form2
         Me.Label12.BackColor = System.Drawing.Color.White
         Me.Label12.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(14, 118)
+        Me.Label12.Location = New System.Drawing.Point(16, 142)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(84, 40)
+        Me.Label12.Size = New System.Drawing.Size(84, 20)
         Me.Label12.TabIndex = 50
-        Me.Label12.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "包含组件："
+        Me.Label12.Text = "包含组件："
         '
         'Label4
         '
@@ -232,9 +233,9 @@ Partial Class Form2
         Me.Label4.ForeColor = System.Drawing.Color.DimGray
         Me.Label4.Location = New System.Drawing.Point(14, 55)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(73, 20)
+        Me.Label4.Size = New System.Drawing.Size(157, 40)
         Me.Label4.TabIndex = 49
-        Me.Label4.Text = "版本：1.7"
+        Me.Label4.Text = "版本：1.7" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "PAA像素艺术大赛专版"
         '
         'Label6
         '
@@ -252,6 +253,8 @@ Partial Class Form2
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Location = New System.Drawing.Point(-2, -4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(299, 376)
@@ -264,7 +267,6 @@ Partial Class Form2
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(715, 353)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label44)
         Me.Controls.Add(Me.Label11)
@@ -276,7 +278,6 @@ Partial Class Form2
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -287,6 +288,8 @@ Partial Class Form2
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "关于"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

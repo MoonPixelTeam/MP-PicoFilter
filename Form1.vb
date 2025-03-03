@@ -1859,15 +1859,7 @@ Public Class Form1
     End Class
 
     Private Sub qrButton_Click(sender As Object, e As EventArgs) Handles qrButton.Click
-        Dim currentUserName As String = Environment.UserName
-        If currentUserName = "ReGoMark" Then
-            ' 显示 Form4
-            Form4.Show()
-        Else
-            ' 显示错误消息
-            MessageBox.Show("您没有权限使用该功能！", "权限错误", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End If
-
+        Form4.Show()
     End Sub
 
     Private Sub 以此为筛选条件ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 以此为筛选条件ToolStripMenuItem.Click

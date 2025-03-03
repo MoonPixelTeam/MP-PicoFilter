@@ -605,11 +605,11 @@ Partial Class Form4
         Me.Label44.BackColor = System.Drawing.Color.Transparent
         Me.Label44.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label44.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label44.Location = New System.Drawing.Point(56, 436)
+        Me.Label44.Location = New System.Drawing.Point(206, 436)
         Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(399, 20)
+        Me.Label44.Size = New System.Drawing.Size(249, 20)
         Me.Label44.TabIndex = 85
-        Me.Label44.Text = "目前该程序仍处于内部测试状态，通常情况下您无法使用。"
+        Me.Label44.Text = "适用于专栏末尾二维码更换的工具。"
         Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Form4
@@ -663,7 +663,7 @@ Partial Class Form4
         Me.MaximizeBox = False
         Me.Name = "Form4"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "PicoCode Alpha"
+        Me.Text = "PicoCoder（内部使用，仅支持拖拽放置）"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
