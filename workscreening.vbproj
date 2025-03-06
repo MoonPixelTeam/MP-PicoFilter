@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F575B19B-9E99-4302-9948-695B65D76126}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>PicoFilter16.My.MyApplication</StartupObject>
-    <RootNamespace>PicoFilter16</RootNamespace>
+    <StartupObject>PicoFilter17.My.MyApplication</StartupObject>
+    <RootNamespace>PicoFilter17</RootNamespace>
     <AssemblyName>PicoFilter</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
@@ -40,6 +40,8 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>PicoFilter.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PreferNativeArm64>false</PreferNativeArm64>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,6 +52,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>PicoFilter.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -64,7 +67,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>picofiltermain.ico</ApplicationIcon>
+    <ApplicationIcon>picofilter.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>E4FC3EC70BD2386052EA4F38A2C9D7C0D710B8E1</ManifestCertificateThumbprint>
@@ -82,7 +85,7 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EPPlus, Version=7.3.2.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
@@ -247,6 +250,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.manifest" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -285,7 +289,7 @@
     <None Include="Resources\RESOLVED.wav" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="picofiltermain.ico" />
+    <Content Include="picofilter.ico" />
     <None Include="Resources\QRcodeBG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
