@@ -6,8 +6,8 @@
 
 ## 一款图片筛选工具，当前版本：![GitHub Release](https://img.shields.io/github/v/release/ReGoMark/PicoFilter)
 
->[warning]
 >本工具复刻自：https://github.com/ReGoMark/PicoFilter/tree/main
+>
 >当前分支版本的更新可能稍滞后于原始版本。
 
 <a href="./LICENSE">
