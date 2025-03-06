@@ -270,7 +270,7 @@ Partial Class Form6
         Me.ComboBox1.BackColor = System.Drawing.Color.White
         Me.ComboBox1.Font = New System.Drawing.Font("方正黑体_GBK", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"(无)", "{0index}_PAA{0month}月挑战", "{0index}_PAA{0date}季赛"})
+        Me.ComboBox1.Items.AddRange(New Object() {"(无)", "{0index}_PAA{0month}月挑战", "{0index}_PAA{year}季赛"})
         Me.ComboBox1.Location = New System.Drawing.Point(5, 415)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(206, 24)
