@@ -234,9 +234,9 @@ Partial Class Form6
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("Consolas", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Button6.Location = New System.Drawing.Point(273, 414)
+        Me.Button6.Location = New System.Drawing.Point(283, 414)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(50, 26)
+        Me.Button6.Size = New System.Drawing.Size(40, 26)
         Me.Button6.TabIndex = 87
         Me.Button6.Text = "MTH"
         Me.ToolTip1.SetToolTip(Me.Button6, "序号和月份命名")
@@ -255,9 +255,9 @@ Partial Class Form6
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Consolas", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Button5.Location = New System.Drawing.Point(217, 414)
+        Me.Button5.Location = New System.Drawing.Point(237, 414)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(50, 26)
+        Me.Button5.Size = New System.Drawing.Size(40, 26)
         Me.Button5.TabIndex = 86
         Me.Button5.Text = "NUM"
         Me.ToolTip1.SetToolTip(Me.Button5, "序号命名")
@@ -270,10 +270,10 @@ Partial Class Form6
         Me.ComboBox1.BackColor = System.Drawing.Color.White
         Me.ComboBox1.Font = New System.Drawing.Font("方正黑体_GBK", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"(无)", "{0index}_PAA{0month}月挑战", "{0index}_PAA{year}季赛"})
+        Me.ComboBox1.Items.AddRange(New Object() {"(无)", "{0index}_{0month}月挑战_PAA", "{0index}_{year}{season}季赛_PAA"})
         Me.ComboBox1.Location = New System.Drawing.Point(5, 415)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(206, 24)
+        Me.ComboBox1.Size = New System.Drawing.Size(226, 24)
         Me.ComboBox1.TabIndex = 88
         '
         'xlsxButton

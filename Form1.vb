@@ -22,7 +22,7 @@ Public Class Form1
     Dim lbldStr As String '存储标记文件的文本
     Dim formattedString As String
     Public toForm5Path As String '传递路径文本到form5
-    Public verinfo As String = "PicoFilter 1.7 (PAA像素艺术大赛)" '存储版本信息
+    Public verinfo As String = "PicoFilter 1.7 (PAA专版)" '存储版本信息
     Private optext As String = "操作中心" '存储操作按钮默认文本
     Private optcolor As Color = Color.White '存储操作按钮默认颜色
     Private WithEvents optTimer As New Timer() '计量操作按钮显示时间
@@ -449,12 +449,12 @@ Public Class Form1
             optChange("安装「方正黑体GBK」获得最佳视觉体验。", Color.LemonChiffon)
         End If
 
-        Dim currentUserName As String = Environment.UserName
-        If currentUserName = "ReGoMark" Then
-            qrButton.Visible = True
-        Else
-            qrButton.Visible = False
-        End If
+        'Dim currentUserName As String = Environment.UserName
+        'If currentUserName = "ReGoMark" Then
+        '    qrButton.Visible = True
+        'Else
+        '    qrButton.Visible = False
+        'End If
 
     End Sub
 

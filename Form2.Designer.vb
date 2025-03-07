@@ -41,11 +41,11 @@ Partial Class Form2
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -91,8 +91,8 @@ Partial Class Form2
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(309, 277)
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(308, 277)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(187, 20)
         Me.Label7.TabIndex = 9
@@ -146,29 +146,28 @@ Partial Class Form2
         'Label5
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label5.BackColor = System.Drawing.Color.LightYellow
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(309, 138)
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(308, 155)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(394, 127)
         Me.Label5.TabIndex = 48
-        Me.Label5.Text = "声明:  本软件受 MIT 许可协议的的保护。此外软件本身包含的字体或其他相关资源，版权归各自公司所有，受相应的许可协议及著作权法保护。"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label5.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "PAA像素艺术大赛是由月球像素社区创始人由2024年04月19日自发创建的公益赛事，主要以““像素艺术””为主进行绘画比赛，比赛奖励由主办方自筹或他人赞助。我们希" &
+    "望借此活动使国内像素艺术画师更加活跃，为中国像素艺术社区带来更多优秀作品。"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.White
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label11.Location = New System.Drawing.Point(401, 297)
+        Me.Label11.Location = New System.Drawing.Point(308, 135)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(144, 20)
+        Me.Label11.Size = New System.Drawing.Size(219, 20)
         Me.Label11.TabIndex = 50
-        Me.Label11.Text = "单击此处查看教程。"
+        Me.Label11.Text = "教程：单击此处获得联机教程。"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label11.Visible = False
         '
         'Label10
         '
@@ -179,7 +178,7 @@ Partial Class Form2
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(271, 60)
         Me.Label10.TabIndex = 50
-        Me.Label10.Text = "尝试在兼容性设置中启用““程序DPI””和““高DPI缩放替代””以获得最佳缩放视觉体验。"
+        Me.Label10.Text = "尝试在兼容性设置中启用""程序DPI""和""高DPI缩放替代""以获得最佳缩放视觉体验。"
         Me.ToolTip1.SetToolTip(Me.Label10, "选中应用程序，右键单击""属性""，切换至""兼容性""选项卡，点击""更改高DPI设置""。在弹出页面中勾选两个已存在的复选框。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "如果仍存在显示问题，可尝试调整部分选项或" &
         "单击""支持""寻求联机支持。")
         '
@@ -197,7 +196,7 @@ Partial Class Form2
         '
         Me.ListBox1.BackColor = System.Drawing.Color.GhostWhite
         Me.ListBox1.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
-        Me.ListBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ListBox1.ForeColor = System.Drawing.Color.Black
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 20
         Me.ListBox1.Items.AddRange(New Object() {"PicoFilter 图像筛选 - 1.7.2", "PicoNamer 批量重命名 - 0.5.2", "PicoCoder 二维码裁切 - 0.1.0", "方正黑体 默认显示字体 - 5.3.0", "微软雅黑 列表显示字体 - 11.3.0", "Consola 等宽字符显示字体- 7.0.0", "EPPlus 表格导出功能支持库 - 7.3.2"})
@@ -258,6 +257,16 @@ Partial Class Form2
         Me.Panel1.Size = New System.Drawing.Size(299, 376)
         Me.Panel1.TabIndex = 53
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(237, 20)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(48, 48)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 54
+        Me.PictureBox2.TabStop = False
+        '
         'PictureBox1
         '
         Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right
@@ -270,24 +279,14 @@ Partial Class Form2
         Me.PictureBox1.TabStop = False
         Me.PictureBox1.Visible = False
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(237, 20)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(48, 48)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 54
-        Me.PictureBox2.TabStop = False
-        '
         'Form2
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(715, 353)
+        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label44)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button2)
@@ -305,8 +304,8 @@ Partial Class Form2
         Me.Text = "关于"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
