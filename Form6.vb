@@ -4,12 +4,18 @@ Public Class Form6
     Private currentColumn As Integer = -1 '存储当前排序的列和顺序
     Private currentOrder As SortOrder = SortOrder.Ascending '存储当前排序的列和顺序
     Private originalNames As New Dictionary(Of Integer, String)()
+    Dim Publicpath As String
 
     Private Sub Form6_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ListViewPre.Width = 328
         ComboBox1.SelectedIndex = 0
         ListViewPre.AllowDrop = True
-
+        Publicpath = ""
+        ' 添加工具提示，展示所有可用格式
+        Dim toolTip As New ToolTip()
+        toolTip.ToolTipIcon = ToolTipIcon.Info
+        toolTip.ToolTipTitle = "可用格式"
+        toolTip.SetToolTip(ComboBox1, "{name} - 原始文件名" & vbCrLf & "{index} - 序号(!)" & vbCrLf & "{0index} - 补齐0的序号(0!)" & vbCrLf & "{season} - 季(春/夏/秋/冬)" & vbCrLf & "{year} - 年(yyyy)" & vbCrLf & "{month} - 月(M)" & vbCrLf & "{0month} - 补齐0的月(0M)" & vbCrLf & "{date} - 日期(yyyyMd)" & vbCrLf & "{0date} - 补齐0的日期(yyyy0M0d)")
     End Sub
 
     Private Sub bksbutton_Click(sender As Object, e As EventArgs) Handles bksbutton.Click
@@ -39,35 +45,19 @@ Public Class Form6
     Private Sub addButton_Click(sender As Object, e As EventArgs) Handles loadButton.Click
         转到重命名()
     End Sub
-
     Public Sub 转到重命名()
-        ListViewPre.Items.Clear()
-        Dim allowedExtensions As String() = {".jpg", ".jpeg", ".png", ".gif", ".bmp", ".ico"}
+        ListViewPre.Items.Clear()  ' 确保清空旧数据
         For i As Integer = 0 To Form1.ListViewRT.Items.Count - 1
             Dim item As ListViewItem = Form1.ListViewRT.Items(i)
-            Dim filePath As String = item.Tag.ToString() ' 获取完整文件路径
-            Dim fileExt As String = Path.GetExtension(filePath).ToLower() ' 获取文件扩展名
-            ' 只添加符合格式的文件
-            If allowedExtensions.Contains(fileExt) Then
-                Dim newItem As New ListViewItem((ListViewPre.Items.Count + 1).ToString()) ' 第一栏显示动态序号
-                newItem.SubItems.Add(item.SubItems(0).Text) ' 第二栏保留原始序号
-                newItem.SubItems.Add(item.SubItems(2).Text) ' 第三栏是文件名
-                newItem.SubItems.Add(item.SubItems(2).Text) ' 第四栏是原始文件名
-                newItem.Tag = filePath ' 确保文件路径信息不会丢失
-                ListViewPre.Items.Add(newItem)
-            End If
+            Dim newItem As New ListViewItem((i + 1).ToString()) ' 第一栏显示动态序号
+            newItem.SubItems.Add(item.SubItems(0).Text) ' 第二栏保留原始序号
+            newItem.SubItems.Add(item.SubItems(2).Text) ' 第三栏是文件名
+            newItem.SubItems.Add(item.SubItems(2).Text) ' 第三栏是原始文件名
+            newItem.Tag = item.Tag ' 确保文件路径信息不会丢失
+            ListViewPre.Items.Add(newItem)
         Next
-        TextBox1.Text = Form1.openText.Text
+        Publicpath = Form1.openText.Text
         Console.WriteLine("ListViewPre 中的项目数量：" & ListViewPre.Items.Count)
-    End Sub
-
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' 添加工具提示，展示所有可用格式
-        Dim toolTip As New ToolTip()
-        toolTip.ToolTipIcon = ToolTipIcon.Info
-        toolTip.ToolTipTitle = "可用格式"
-        toolTip.SetToolTip(ComboBox1, "{name} - 原始文件名" & vbCrLf & "{index} - 序号(!)" & vbCrLf & "{0index} - 补齐0的序号(0!)" & vbCrLf & "{season} - 季(春/夏/秋/冬)" & vbCrLf & "{year} - 年(yyyy)" & vbCrLf & "{month} - 月(M)" & vbCrLf & "{0month} - 补齐0的月(0M)" & vbCrLf & "{date} - 日期(yyyyMd)" & vbCrLf & "{0date} - 补齐0的日期(yyyy0M0d)")
     End Sub
 
     Private Sub ApplyButton_Click(sender As Object, e As EventArgs) Handles ApplyButton.Click
@@ -151,23 +141,25 @@ Public Class Form6
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Using folderDialog As New FolderBrowserDialog()
-            If folderDialog.ShowDialog() = DialogResult.OK Then
-                Dim targetPath As String = folderDialog.SelectedPath
-                Dim sourcePath As String = TextBox1.Text
+        If ListViewPre.Items.Count > 0 Then
+            Using folderDialog As New FolderBrowserDialog()
+                If folderDialog.ShowDialog() = DialogResult.OK Then
+                    Dim targetPath As String = folderDialog.SelectedPath
+                    Dim sourcePath As String = Publicpath
 
-                For Each item As ListViewItem In ListViewPre.Items
-                    Dim originalFilePath As String = IO.Path.Combine(sourcePath, originalNames(item.Index))
-                    Dim newFilePath As String = IO.Path.Combine(targetPath, item.SubItems(2).Text)
+                    For Each item As ListViewItem In ListViewPre.Items
+                        Dim originalFilePath As String = IO.Path.Combine(sourcePath, originalNames(item.Index))
+                        Dim newFilePath As String = IO.Path.Combine(targetPath, item.SubItems(2).Text)
 
-                    If IO.File.Exists(originalFilePath) Then
-                        IO.File.Copy(originalFilePath, newFilePath, True) ' 复制文件
-                    End If
+                        If IO.File.Exists(originalFilePath) Then
+                            IO.File.Copy(originalFilePath, newFilePath, True) ' 复制文件
+                        End If
 
-                Next
-                MessageBox.Show("重命名副本已保存。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
-        End Using
+                    Next
+                    MessageBox.Show("重命名副本已保存。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            End Using
+        End If
     End Sub
 
     Private Sub ListViewPre_ColumnClick(sender As Object, e As ColumnClickEventArgs) Handles ListViewPre.ColumnClick
@@ -265,19 +257,21 @@ Public Class Form6
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim sourcePath As String = TextBox1.Text
+        If ListViewPre.Items.Count > 0 Then
+            Dim sourcePath As String = Publicpath
 
-        If MessageBox.Show("确定要覆盖原文件名吗？操作不可逆！", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
-            For Each item As ListViewItem In ListViewPre.Items
-                Dim originalFilePath As String = IO.Path.Combine(sourcePath, originalNames(item.Index))
-                Dim newFilePath As String = IO.Path.Combine(sourcePath, item.SubItems(2).Text)
+            If MessageBox.Show("确定要覆盖原文件名吗？操作不可逆！", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+                For Each item As ListViewItem In ListViewPre.Items
+                    Dim originalFilePath As String = IO.Path.Combine(sourcePath, originalNames(item.Index))
+                    Dim newFilePath As String = IO.Path.Combine(sourcePath, item.SubItems(2).Text)
 
-                If IO.File.Exists(originalFilePath) AndAlso originalFilePath <> newFilePath Then
-                    IO.File.Move(originalFilePath, newFilePath) ' 直接重命名文件
-                End If
-            Next
-            MessageBox.Show("覆盖文件名已完成。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Form1.optChange("警告：文件名已修改，需要重新加载。", Color.LemonChiffon)
+                    If IO.File.Exists(originalFilePath) AndAlso originalFilePath <> newFilePath Then
+                        IO.File.Move(originalFilePath, newFilePath) ' 直接重命名文件
+                    End If
+                Next
+                MessageBox.Show("覆盖文件名已完成。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Form1.optChange("警告：文件名已修改，需要重新加载。", Color.LemonChiffon)
+            End If
         End If
     End Sub
 
@@ -386,8 +380,10 @@ Public Class Form6
         If ListViewPre.SelectedItems.Count > 0 Then
             Dim selectedItem As ListViewItem = ListViewPre.SelectedItems(0)
             Dim fileName As String = selectedItem.SubItems(3).Text '获取选中的文件名
-            Dim folderPath As String = Form1.openText.Text '文件夹路径
+            Dim folderPath As String = Publicpath '文件夹路径
+            TextBox1.Text = Publicpath
             Dim filePath As String = Path.Combine(folderPath, fileName) '拼接完整的文件路径
+            Console.WriteLine("打开文件：" & filePath)
             Try
                 Process.Start(filePath) ' 使用默认程序打开文件
             Catch ex As Exception
@@ -395,6 +391,7 @@ Public Class Form6
             End Try
         End If
     End Sub
+
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Dim formatString As String = ComboBox1.Text
         If String.IsNullOrWhiteSpace(formatString) Then Return
