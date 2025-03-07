@@ -1,12 +1,10 @@
 
 # 介绍
-<div align="center">
 
-![ICON](./Resources/ICON.ico)
+![ICON](./Resources/picofilter.ico)
 
-## 一款图片筛选工具，当前版本：![GitHub Release](https://img.shields.io/github/v/release/ReGoMark/PicoFilter)
 
->本工具复刻自：https://github.com/ReGoMark/PicoFilter/tree/main, 当前分支版本的更新可能稍滞后于原始版本
+## 图片筛选、排序和重命名工具
 
 <a href="./LICENSE">
     <img src="https://img.shields.io/github/license/ReGoMark/PicoFilter.svg?style=for-the-badge" alt="license"></a>
@@ -16,12 +14,11 @@
     <img src="https://img.shields.io/github/stars/ReGoMark/PicoFilter.svg?style=for-the-badge" alt="stars"></a>
 <a href="https://github.com/ReGoMark/PicoFilter/issues">
     <img src="https://img.shields.io/github/issues/ReGoMark/PicoFilter.svg?style=for-the-badge" alt="issues"></a>
-    
-</div>
+
+>本工具复刻自：https://github.com/ReGoMark/PicoFilter/tree/main, 当前分支版本的更新可能稍滞后于原始版本。
+
 
 支持常用图片格式如 `JPEG & JPG`，`PNG`，`GIF`，`ICO`，`BMP`，大约可以筛选4000张图像文件，加载时间取决于目录结构复杂程度和单文件的体积。
-
-
 无论是界面设计还是运行平台均遵循标准的 Win32 设计规范，完全基于 `.net Framework` 的原生开发。除此之外，几乎肉眼可见的所有控件，都添加了工具提示，方便用户查看、使用。
 
 >[!CAUTION]
@@ -68,11 +65,24 @@
 ![](./Assets/398368137-4a76b72a-e837-4c84-bc36-6739c3200c48.png)
 ![](./Assets/398368160-7b607b31-a668-4996-aad0-64ca21bc0898.png)
 
-# 开发初衷
+# 初衷
 开发初衷是针对 PAA 像素艺术大赛中的尺寸不合规、格式不合规文件进行筛选，便于后续工作的开展。因为当前社区网站还未完全建立起来，选手的投稿作品都是通过第三方网站上传，我们的收集工作也是手工从网站内下载的。对于分辨率不合规的作品，在放大的时候可能会比较模糊；同样的，PNG和JPG格式的不同，也影响了放大或展示质量。
+
+# 日志
 
 >[!NOTE]
 >+“新增”；-“删去”；~“优化”；=“修正”
+
+## 1.7
+### 2025/3/6
++批量重命名功能；
+
+~高DPI缩放导致的布局错位和字体缩放异常等问题；
+
+=重命名工具支持独立使用（拖入文件夹）；
+
+~一些已知问题。
+
 ## 1.6
 ### 2025/2/28
 =若干问题；
