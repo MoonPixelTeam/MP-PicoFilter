@@ -32,7 +32,6 @@ Partial Class Form2
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Process1 = New System.Diagnostics.Process()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Label10 = New System.Windows.Forms.Label()
@@ -43,6 +42,7 @@ Partial Class Form2
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -156,19 +156,6 @@ Partial Class Form2
         Me.Label5.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "PAA像素艺术大赛是由月球像素社区创始人由2024年04月19日自发创建的公益赛事，主要以""像素艺术""为主进行绘画比赛，比赛奖励由主办方自筹或他人赞助。我们希" &
     "望借此活动使国内像素艺术画师更加活跃，为中国像素艺术社区带来更多优秀作品。"
         '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.Brown
-        Me.Label11.Location = New System.Drawing.Point(308, 135)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(219, 20)
-        Me.Label11.TabIndex = 50
-        Me.Label11.Text = "教程：单击此处获得联机教程。"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
         'Process1
         '
         Me.Process1.StartInfo.Domain = ""
@@ -279,12 +266,24 @@ Partial Class Form2
         Me.PictureBox1.TabStop = False
         Me.PictureBox1.Visible = False
         '
+        'Label8
+        '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label8.Cursor = System.Windows.Forms.Cursors.Help
+        Me.Label8.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Brown
+        Me.Label8.Location = New System.Drawing.Point(308, 135)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(401, 20)
+        Me.Label8.TabIndex = 54
+        Me.Label8.Text = "教程：单击此处获得联机教程。"
+        '
         'Form2
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(715, 353)
-        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label44)
@@ -318,7 +317,6 @@ Partial Class Form2
     Friend WithEvents Button2 As Button
     Friend WithEvents Label44 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label11 As Label
     Friend WithEvents Process1 As Process
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents ListBox1 As ListBox
@@ -329,4 +327,5 @@ Partial Class Form2
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents Label8 As Label
 End Class
