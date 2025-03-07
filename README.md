@@ -1,7 +1,7 @@
 
 # 介绍
 
-![ICON](./Resources/ICON.ico)
+![ICON](./Resources/picofilter.ico)
 
 
 ## 图片筛选、排序和重命名工具
