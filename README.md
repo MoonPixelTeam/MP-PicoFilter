@@ -15,7 +15,7 @@
 <a href="https://github.com/ReGoMark/PicoFilter/issues">
     <img src="https://img.shields.io/github/issues/ReGoMark/PicoFilter.svg?style=for-the-badge" alt="issues"></a>
 
->本工具复刻自：https://github.com/ReGoMark/PicoFilter/tree/main, 当前分支版本的更新可能稍滞后于原始版本.
+>本工具复刻自：https://github.com/ReGoMark/PicoFilter/tree/main, 当前分支版本的更新可能稍滞后于原始版本。
 
 
 支持常用图片格式如 `JPEG & JPG`，`PNG`，`GIF`，`ICO`，`BMP`，大约可以筛选4000张图像文件，加载时间取决于目录结构复杂程度和单文件的体积。
@@ -70,6 +70,17 @@
 
 >[!NOTE]
 >+“新增”；-“删去”；~“优化”；=“修正”
+
+## 1.7
+### 2025/3/6
++批量重命名功能；
+
+~高DPI缩放导致的布局错位和字体缩放异常等问题；
+
+=重命名工具支持独立使用（拖入文件夹）；
+
+~一些已知问题。
+
 ## 1.6
 ### 2025/2/28
 =若干问题；
