@@ -1589,7 +1589,7 @@ Public Class Form1
     Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
         If ListViewRT.SelectedItems.Count > 0 Then
             Dim selectedItem As ListViewItem = ListViewRT.SelectedItems(0)
-            Dim fileName As String = selectedItem.SubItems(1).Text
+            Dim fileName As String = selectedItem.SubItems(2).Text
 
             ' 拼接完整的文件路径
             Dim folderPath As String = openText.Text ' 文件夹路径
