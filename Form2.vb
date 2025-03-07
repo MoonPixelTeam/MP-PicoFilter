@@ -49,7 +49,7 @@
         Me.CenterToScreen()
     End Sub
 
-    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+    Private Sub Label10_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

@@ -33,7 +33,6 @@ Partial Class Form2
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Process1 = New System.Diagnostics.Process()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ListBox1 = New System.Windows.Forms.ListBox()
@@ -43,6 +42,7 @@ Partial Class Form2
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,7 +66,7 @@ Partial Class Form2
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("微软雅黑", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.DarkSlateBlue
+        Me.Label2.ForeColor = System.Drawing.Color.Sienna
         Me.Label2.Location = New System.Drawing.Point(13, 20)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(93, 27)
@@ -104,7 +104,7 @@ Partial Class Form2
         Me.Label44.AutoSize = True
         Me.Label44.BackColor = System.Drawing.Color.Transparent
         Me.Label44.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
-        Me.Label44.ForeColor = System.Drawing.Color.DarkSlateBlue
+        Me.Label44.ForeColor = System.Drawing.Color.Sienna
         Me.Label44.Location = New System.Drawing.Point(401, 317)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(231, 20)
@@ -117,13 +117,13 @@ Partial Class Form2
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Button2.BackColor = System.Drawing.Color.White
         Me.Button2.CausesValidation = False
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateBlue
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Sienna
         Me.Button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Khaki
         Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LemonChiffon
         Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("方正黑体_GBK", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Button2.ForeColor = System.Drawing.Color.DarkSlateBlue
+        Me.Button2.ForeColor = System.Drawing.Color.Sienna
         Me.Button2.Location = New System.Drawing.Point(638, 315)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(65, 26)
@@ -136,7 +136,7 @@ Partial Class Form2
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label9.Cursor = System.Windows.Forms.Cursors.Help
         Me.Label9.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.DarkSlateBlue
+        Me.Label9.ForeColor = System.Drawing.Color.Sienna
         Me.Label9.Location = New System.Drawing.Point(308, 115)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(401, 20)
@@ -153,7 +153,7 @@ Partial Class Form2
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(394, 127)
         Me.Label5.TabIndex = 48
-        Me.Label5.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "PAA像素艺术大赛是由月球像素社区创始人由2024年04月19日自发创建的公益赛事，主要以““像素艺术””为主进行绘画比赛，比赛奖励由主办方自筹或他人赞助。我们希" &
+        Me.Label5.Text = "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "PAA像素艺术大赛是由月球像素社区创始人由2024年04月19日自发创建的公益赛事，主要以""像素艺术""为主进行绘画比赛，比赛奖励由主办方自筹或他人赞助。我们希" &
     "望借此活动使国内像素艺术画师更加活跃，为中国像素艺术社区带来更多优秀作品。"
         '
         'Label11
@@ -161,26 +161,13 @@ Partial Class Form2
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.DarkSlateBlue
+        Me.Label11.ForeColor = System.Drawing.Color.Sienna
         Me.Label11.Location = New System.Drawing.Point(308, 135)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(219, 20)
         Me.Label11.TabIndex = 50
         Me.Label11.Text = "教程：单击此处获得联机教程。"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label10
-        '
-        Me.Label10.BackColor = System.Drawing.Color.White
-        Me.Label10.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.DarkSlateBlue
-        Me.Label10.Location = New System.Drawing.Point(14, 281)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(271, 60)
-        Me.Label10.TabIndex = 50
-        Me.Label10.Text = "尝试在兼容性设置中启用""程序DPI""和""高DPI缩放替代""以获得最佳缩放视觉体验。"
-        Me.ToolTip1.SetToolTip(Me.Label10, "选中应用程序，右键单击""属性""，切换至""兼容性""选项卡，点击""更改高DPI设置""。在弹出页面中勾选两个已存在的复选框。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "如果仍存在显示问题，可尝试调整部分选项或" &
-        "单击""支持""寻求联机支持。")
         '
         'Process1
         '
@@ -194,7 +181,7 @@ Partial Class Form2
         '
         'ListBox1
         '
-        Me.ListBox1.BackColor = System.Drawing.Color.GhostWhite
+        Me.ListBox1.BackColor = System.Drawing.Color.Linen
         Me.ListBox1.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
         Me.ListBox1.ForeColor = System.Drawing.Color.Black
         Me.ListBox1.FormattingEnabled = True
@@ -246,8 +233,8 @@ Partial Class Form2
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label4)
@@ -278,6 +265,19 @@ Partial Class Form2
         Me.PictureBox1.TabIndex = 48
         Me.PictureBox1.TabStop = False
         Me.PictureBox1.Visible = False
+        '
+        'Label10
+        '
+        Me.Label10.BackColor = System.Drawing.Color.White
+        Me.Label10.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.Sienna
+        Me.Label10.Location = New System.Drawing.Point(14, 281)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(271, 60)
+        Me.Label10.TabIndex = 55
+        Me.Label10.Text = "安装指定字体以获得最佳视觉体验；请尝试启用""程序DPI""和""高DPI缩放替代""获得最佳缩放体验。"
+        Me.ToolTip1.SetToolTip(Me.Label10, "选中应用程序，右键单击""属性""，切换至""兼容性""选项卡，点击""更改高DPI设置""。在弹出页面中勾选两个已存在的复选框。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "如果仍存在显示问题，可尝试调整部分选项或" &
+        "单击""支持""寻求联机支持。")
         '
         'Form2
         '
@@ -318,7 +318,6 @@ Partial Class Form2
     Friend WithEvents Button2 As Button
     Friend WithEvents Label44 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Process1 As Process
     Friend WithEvents ToolTip1 As ToolTip
@@ -329,4 +328,5 @@ Partial Class Form2
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label10 As Label
 End Class
