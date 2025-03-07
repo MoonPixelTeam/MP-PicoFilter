@@ -35,6 +35,7 @@ Partial Class Form2
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Process1 = New System.Diagnostics.Process()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -42,7 +43,6 @@ Partial Class Form2
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,7 +66,7 @@ Partial Class Form2
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("微软雅黑", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Sienna
+        Me.Label2.ForeColor = System.Drawing.Color.Brown
         Me.Label2.Location = New System.Drawing.Point(13, 20)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(93, 27)
@@ -104,7 +104,7 @@ Partial Class Form2
         Me.Label44.AutoSize = True
         Me.Label44.BackColor = System.Drawing.Color.Transparent
         Me.Label44.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
-        Me.Label44.ForeColor = System.Drawing.Color.Sienna
+        Me.Label44.ForeColor = System.Drawing.Color.Brown
         Me.Label44.Location = New System.Drawing.Point(401, 317)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(231, 20)
@@ -123,7 +123,7 @@ Partial Class Form2
         Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("方正黑体_GBK", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
-        Me.Button2.ForeColor = System.Drawing.Color.Sienna
+        Me.Button2.ForeColor = System.Drawing.Color.Brown
         Me.Button2.Location = New System.Drawing.Point(638, 315)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(65, 26)
@@ -136,7 +136,7 @@ Partial Class Form2
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label9.Cursor = System.Windows.Forms.Cursors.Help
         Me.Label9.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Sienna
+        Me.Label9.ForeColor = System.Drawing.Color.Brown
         Me.Label9.Location = New System.Drawing.Point(308, 115)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(401, 20)
@@ -161,7 +161,7 @@ Partial Class Form2
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.Sienna
+        Me.Label11.ForeColor = System.Drawing.Color.Brown
         Me.Label11.Location = New System.Drawing.Point(308, 135)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(219, 20)
@@ -178,6 +178,19 @@ Partial Class Form2
         Me.Process1.StartInfo.StandardOutputEncoding = Nothing
         Me.Process1.StartInfo.UserName = ""
         Me.Process1.SynchronizingObject = Me
+        '
+        'Label10
+        '
+        Me.Label10.BackColor = System.Drawing.Color.White
+        Me.Label10.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.Brown
+        Me.Label10.Location = New System.Drawing.Point(14, 281)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(271, 60)
+        Me.Label10.TabIndex = 55
+        Me.Label10.Text = "安装指定字体以获得最佳视觉体验；请尝试启用""程序DPI""和""高DPI缩放替代""获得最佳缩放体验。"
+        Me.ToolTip1.SetToolTip(Me.Label10, "选中应用程序，右键单击""属性""，切换至""兼容性""选项卡，点击""更改高DPI设置""。在弹出页面中勾选两个已存在的复选框。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "如果仍存在显示问题，可尝试调整部分选项或" &
+        "单击""支持""寻求联机支持。")
         '
         'ListBox1
         '
@@ -265,19 +278,6 @@ Partial Class Form2
         Me.PictureBox1.TabIndex = 48
         Me.PictureBox1.TabStop = False
         Me.PictureBox1.Visible = False
-        '
-        'Label10
-        '
-        Me.Label10.BackColor = System.Drawing.Color.White
-        Me.Label10.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, CType(134, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.Sienna
-        Me.Label10.Location = New System.Drawing.Point(14, 281)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(271, 60)
-        Me.Label10.TabIndex = 55
-        Me.Label10.Text = "安装指定字体以获得最佳视觉体验；请尝试启用""程序DPI""和""高DPI缩放替代""获得最佳缩放体验。"
-        Me.ToolTip1.SetToolTip(Me.Label10, "选中应用程序，右键单击""属性""，切换至""兼容性""选项卡，点击""更改高DPI设置""。在弹出页面中勾选两个已存在的复选框。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "如果仍存在显示问题，可尝试调整部分选项或" &
-        "单击""支持""寻求联机支持。")
         '
         'Form2
         '
