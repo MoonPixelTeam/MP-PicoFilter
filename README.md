@@ -6,14 +6,6 @@
 
 ## 图片筛选、排序和重命名工具
 
-<a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/ReGoMark/PicoFilter.svg?style=for-the-badge" alt="license"></a>
-<a href="https://github.com/ReGoMark/PicoFilter/commits/main">
-    <img src="https://img.shields.io/github/last-commit/ReGoMark/PicoFilter?style=for-the-badge"></a>
-<a href="https://github.com/ReGoMark/PicoFilter/stargazers">
-    <img src="https://img.shields.io/github/stars/ReGoMark/PicoFilter.svg?style=for-the-badge" alt="stars"></a>
-<a href="https://github.com/ReGoMark/PicoFilter/issues">
-    <img src="https://img.shields.io/github/issues/ReGoMark/PicoFilter.svg?style=for-the-badge" alt="issues"></a>
 
 >本工具复刻自：https://github.com/ReGoMark/PicoFilter/tree/main, 当前分支版本的更新可能稍滞后于原始版本。
 
